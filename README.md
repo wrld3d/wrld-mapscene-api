@@ -61,7 +61,7 @@ A SearchMenuItem is a JSON object with the following attributes:
 |`name`|string| the human readable display name
 |`search_tag`|string| the eegeo tag to search for
 |`icon_key`|string| the icon to use
-|`skip_yelp_search`|bool| (optional)set to true to disable yelp search functionality
+|`skip_yelp_search`|bool| (optional) set to true to disable yelp search functionality
 |`yelp_mapping`|string| (optional) the yelp category to search for
 
 The default set of search tags can be found here: https://cdn1.eegeo.com/eegeo-search/latest/tags/search_tags.json
