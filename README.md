@@ -138,6 +138,39 @@ $ curl -v https://eegeo.mp/v1.0/mapscenes/<MID>?token=<dev_auth_token>
 
 Where ```<MID>``` is the Map Scene ID to query. This will return the Map Scene as JSON.
 
+##### Edit a Map Scene
+
+To edit an existing Map Scene, make a RESTful request passing the changes to the Map Scene. For example, to change the name and starting location of the MapScene:
+
+```
+$ curl -v -XPUT https://eegeo.mp/v1.0/mapscenes/<MID>?token=<dev_auth_token> -d '{
+   "name":"Updated Name",
+   "start_location_latitude":"47.459984",
+   "start_location_longitude":"12.978228"
+}'
+```
+
+The response will be a JSON object specifying the updated Map Scene.
+
+To change the SearchMenuItems in the menu, you must pass the entire model of the menu.  For example, if you add one you must include the original as well:
+
+```
+$ curl -v -XPUT https://eegeo.mp/v1.0/mapscenes/<MID>?token=<dev_auth_token> -d '{
+    "outdoor_search_menu_items_attributes":[
+    {
+         "name":"Offices",
+         "search_tag":"office",
+         "icon_key":"office"
+    },
+    {
+         "name":"Hotels",
+         "search_tag":"hotel",
+         "icon_key":"hotel"
+    }
+   ]
+}'
+```
+
 ##### Delete a Map Scene
 
 To delete a Map Scene, make a RESTful request to the poiset:
