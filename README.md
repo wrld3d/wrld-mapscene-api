@@ -52,7 +52,7 @@ A Map Scene is a JSON object with the following attributes:
 |`coveragetree_manifest_url`|string| (optional) url to an eegeo coverage tree
 |`web_coveragetree_manifest_url`|string| (optional) url to an eegeo web coverage tree
 |`theme_manifest_url`|string| (optional) url to an eegeo theme
-|`outdoor_search_menu_items`|array| (optional) an array of SearchMenuItems to configure the search taxonomy used in the map
+|`outdoor_search_menu_items_attributes`|array| (optional) an array of SearchMenuItems to configure the search taxonomy used in the map
 
 A SearchMenuItem is a JSON object with the following attributes:
 
