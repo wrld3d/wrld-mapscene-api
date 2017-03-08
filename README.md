@@ -47,6 +47,7 @@ A Map Scene is a JSON object with the following attributes:
 |`start_location_latitude`|decimal| (optional) the WGS84 decimal degrees latitude of the camera's starting point of interest
 |`start_location_longitude`|decimal| (optional) the WGS84 decimal degrees longitude of the camera's starting point of interest
 |`start_location_altitude`|decimal| (optional) the AMSL in metres of the camera's starting point of interest
+|`start_location_distance`|decimal| (optional) how close the camera should be to the starting point of interest (effectively a 'zoom' amount)
 |`start_location_orientation_degrees`|decimal| (optional) the heading from north of the camera orientation in degrees
 |`try_start_at_gps_location`|boolean| (optional) whether the map should attempt to go to the gps location initially
 |`coveragetree_manifest_url`|string| (optional) url to an eegeo coverage tree
