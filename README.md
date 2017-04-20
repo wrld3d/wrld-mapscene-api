@@ -74,7 +74,7 @@ The default set of icons can be found here: https://cdn1.wrld3d.com/wrld-search/
 To create a new Map Scene, make a RESTful request passing the Map Scene object
 
 ```sh
-$ curl -v -XPOST https://wrld3d.mp/v1.1/mapscenes/?token=dev_auth_token -d '{
+$ curl -v -XPOST https://wrld.mp/v1.1/mapscenes/?token=dev_auth_token -d '{
    "name":"Westport House",
    "start_location_latitude":"56.459984",
    "start_location_longitude":"-2.978228",
@@ -124,7 +124,7 @@ Make note of the short_link, in this case ```abcdef``` as this is used to access
 All Map Scenes you own can be listed by making a RESTful request to the mapscenes resource:
 
 ```
-$ curl -v https://wrld3d.mp/v1.1/mapscenes/?token=<dev_auth_token>
+$ curl -v https://wrld.mp/v1.1/mapscenes/?token=<dev_auth_token>
 ```
 
 This will return a collection of all Map Scenes you own
@@ -134,7 +134,7 @@ This will return a collection of all Map Scenes you own
 To query an individual Map Scene, make a RESTful request to the Map Scene:
 
 ```
-$ curl -v https://wrld3d.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token>
+$ curl -v https://wrld.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token>
 ```
 
 Where ```<MID>``` is the Map Scene ID to query. This will return the Map Scene as JSON.
@@ -144,7 +144,7 @@ Where ```<MID>``` is the Map Scene ID to query. This will return the Map Scene a
 To edit an existing Map Scene, make a RESTful request passing the changes to the Map Scene. For example, to change the name and starting location of the MapScene:
 
 ```
-$ curl -v -XPUT https://wrld3d.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token> -d '{
+$ curl -v -XPUT https://wrld.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token> -d '{
    "name":"Updated Name",
    "start_location_latitude":"47.459984",
    "start_location_longitude":"12.978228"
@@ -156,7 +156,7 @@ The response will be a JSON object specifying the updated Map Scene.
 To change the SearchMenuItems in the menu, you must pass the entire model of the menu.  For example, if you add one you must include the original as well:
 
 ```
-$ curl -v -XPUT https://wrld3d.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token> -d '{
+$ curl -v -XPUT https://wrld.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token> -d '{
     "outdoor_search_menu_items_attributes":[
     {
          "name":"Offices",
@@ -176,7 +176,7 @@ $ curl -v -XPUT https://wrld3d.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token> -d
 
 To delete a Map Scene, make a RESTful request to the poiset:
 ```
-$ curl -v -XDELETE https://wrld3d.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token>
+$ curl -v -XDELETE https://wrld.mp/v1.1/mapscenes/<MID>?token=<dev_auth_token>
 ```
 Where ```<MID>``` is the Map Scene ID to delete.
 
@@ -185,10 +185,10 @@ Where ```<MID>``` is the Map Scene ID to delete.
 The ```short_link``` of a Map Scene is used to access the map scene
 
 ```
-$ curl -v https://wrld3d.mp/<short_link>
+$ curl -v https://wrld.mp/<short_link>
 ```
 
-Requests to `https://wrld3d.mp/<short_link>` redirect the agent to:
+Requests to `https://wrld.mp/<short_link>` redirect the agent to:
 * maps.wrld3d.com if on browser
 * wrld:// deep links, for use with [wrld-example-app](http://github.com/wrld3d/wrld-example-app) if on iOS or Android
 
