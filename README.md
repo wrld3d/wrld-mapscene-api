@@ -54,6 +54,8 @@ A Map Scene is a JSON object with the following attributes:
 |`web_coveragetree_manifest_url`|string| (optional) url to an WRLD web coverage tree
 |`theme_manifest_url`|string| (optional) url to an WRLD theme
 |`outdoor_search_menu_items_attributes`|array| (optional) an array of SearchMenuItems to configure the search taxonomy used in the map
+|`perform_start_up_search`|boolean| (optional) Whether the map should perform a search on start up
+|`start_up_search_tag`|string| (optional) The search tag to perform when perform_start_up_search is true
 
 A SearchMenuItem is a JSON object with the following attributes:
 
